@@ -1,7 +1,7 @@
 package com.example.gototodos.controller;
 
 
-import com.example.gototodos.model.Todoitem;
+import com.example.gototodos.model.TodoItem;
 import com.example.gototodos.service.TodoItemsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class TodoItemsController {
     private final TodoItemsService todoItemsService;
 
     @GetMapping(value = "/getAll")
-    public List<Todoitem.TodoItem> getAll() {
+    public List<TodoItem> getAll() {
         return todoItemsService.getAll();
     }
 
